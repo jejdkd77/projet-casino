@@ -18,16 +18,16 @@ while True:
             subprocess.call(
                 ["python", "sicbo.py"],
                 creationflags=subprocess.CREATE_NEW_CONSOLE,
-                cwd=os.path.join(base_path, "projet-casino")
+                cwd=base_path
             )
         elif game_play == 2:
             subprocess.call(
                 ["python", "roulette.py"],
                 creationflags=subprocess.CREATE_NEW_CONSOLE,
-                cwd=os.path.join(base_path, "projet-casino")
+                cwd=base_path
             )
         elif game_play == 3:
-            print("Tạm biệt!")
+            print("Bye!")
             break
         else:
             print_slow("doesnt have game with your choice.\n")
