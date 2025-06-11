@@ -30,4 +30,4 @@ while True:
         print("Tạm biệt!")
         break
     else:
-        print_slow("doesnt have game with yout choice.\n")
+        print_slow("doesnt have game with your choice.\n")
