@@ -13,7 +13,7 @@ print_slow("Welcome to my casino\n")
 print_slow("=== Game Launcher === \n [1] Sicbo \n [2] Roulette \n [3] Exit")
 
 while True:
-        game_play = int(input("\nChọn game: "))
+        game_play = int(input("\nChoose game: "))
         if game_play == 1:
             subprocess.call(
                 ["python", "sicbo.py"],
