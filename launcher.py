@@ -1,28 +1,33 @@
+import os
 import subprocess
 import sys
 import time
+
 def print_slow(str):
     for char in str:
         sys.stdout.write(char)
         sys.stdout.flush()  
-        time.sleep(0.05)  
-print_slow("Chào mừng đến với casino của thằng này\n")
-print_slow("=== Game Launcher === \n [1] Tài xỉu \n [2] Roulette \n [3] Thoát")
+        time.sleep(0.05)
+base_path = os.path.dirname(os.path.abspath(__file__))
+print_slow("Welcome to my casino\n")
+print_slow("=== Game Launcher === \n [1] Sicbo \n [2] Roulette \n [3] Exit")
+
 while True:
-    game_play = int(input("\n Chọn game: "))
+        game_play = int(input("\nChọn game: "))
     if game_play == 1:
-                # Chạy sicbo.py trong CMD riêng, từ đúng thư mục
         subprocess.call(
             ["python", "sicbo.py"],
-        creationflags=subprocess.CREATE_NEW_CONSOLE,
-            cwd="C:\code\sicbo"
+            creationflags=subprocess.CREATE_NEW_CONSOLE,
+            cwd=os.path.join(base_path, "sicbo")
         )
     elif game_play == 2:
         subprocess.call(
             ["python", "roulette.py"],
             creationflags=subprocess.CREATE_NEW_CONSOLE,
-            cwd="C:\code\sicbo"
+            cwd=os.path.join(base_path, "sicbo")
         )
     elif game_play == 3:
         print("Tạm biệt!")
         break
+    else:
+        print_slow("doesnt have game with yout choice.\n")
