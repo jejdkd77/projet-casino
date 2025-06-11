@@ -1,0 +1,35 @@
+{
+    // Configurations for running and debugging Python scripts
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Sicbo",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/code/sicbo/sicbo.py",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Python: Launcher",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/code/sicbo/launcher.py",
+            "console": "externalTerminal"
+        },
+
+        {
+            "name": "Python: Launcher",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/code/sicbo/roulette.py",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Python: Launcher",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/code/sicbo\blackjack.py",
+            "console": "externalTerminal"
+        }    
+    ]
+}
